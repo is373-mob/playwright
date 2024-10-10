@@ -1,0 +1,66 @@
+[
+  {
+    "source": "1-0-kernel.md",
+    "link": "index.html"
+  },
+  {
+    "source": "2-0-virtualization.md",
+    "link": "index.html"
+  },
+  {
+    "source": "2-0-virtualization.md",
+    "link": "2-1-type1.html"
+  },
+  {
+    "source": "2-0-virtualization.md",
+    "link": "2-2-type2.html"
+  },
+  {
+    "source": "2-1-type1.md",
+    "link": "2-0-virtualization.html"
+  },
+  {
+    "source": "2-2-type2.md",
+    "link": "2-0-virtualization.html"
+  },
+  {
+    "source": "3-0-containerization.md",
+    "link": "index.html"
+  },
+  {
+    "source": "3-0-containerization.md",
+    "link": "3-1-docker.html"
+  },
+  {
+    "source": "3-0-containerization.md",
+    "link": "3-2-kubernetes.html"
+  },
+  {
+    "source": "3-0-containerization.md",
+    "link": "3-3-k3s.html"
+  },
+  {
+    "source": "3-1-docker.md",
+    "link": "3-0-containerization.html"
+  },
+  {
+    "source": "3-2-kubernetes.md",
+    "link": "3-1-docker.html"
+  },
+  {
+    "source": "3-3-k3s.md",
+    "link": "3-0-containerization.html"
+  },
+  {
+    "source": "index.md",
+    "link": "1-0-kernel.html"
+  },
+  {
+    "source": "index.md",
+    "link": "2-0-virtualization.html"
+  },
+  {
+    "source": "index.md",
+    "link": "3-0-containerization.html"
+  }
+]
