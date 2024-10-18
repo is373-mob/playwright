@@ -1,31 +1,41 @@
 import { test, expect } from "@playwright/test";
 
-const FILES = ["./0-0-initiative.html", "./1-0-kernel.html", "./2-0-virtualization.html", "./2-1-type1.html", "./2-2-type2.html", "./3-0-containerization.html", "./3-1-docker.html", "./3-2-kubernetes.html", "./3-3-k3s.html"];
-
+const FILES = [
+    "./0-0-initiative.html",
+    "./1-0-kernel.html",
+    "./2-0-virtualization.html",
+    "./2-1-type1.html",
+    "./2-2-type2.html",
+    "./3-0-containerization.html",
+    "./3-1-docker.html",
+    "./3-2-kubernetes.html",
+    "./3-3-k3s.html",
+];
+ 
 // Map of expected breadcrumb links for each file
 const BREADCRUMB_MAP = {
-    "./0-0-initiative.html": ["Home", "Initiatives"],
-    "./1-0-kernel.html": ["Home", "Kernel"],
-    "./2-0-virtualization.html": ["Home", "Virtualization"],
-    "./2-1-type1.html": ["Home", "Virtualization", "Type 1"],
-    "./2-2-type2.html": ["Home", "Virtualization", "Type 2"],
-    "./3-0-containerization.html": ["Home", "Containerization"],
-    "./3-1-docker.html": ["Home", "Containerization", "Docker"],
-    "./3-2-kubernetes.html": ["Home", "Containerization", "Kubernetes"],
-    "./3-3-k3s.html": ["Home", "Containerization", "K3s"],
+    "./0-0-initiative.html": ['Home', 'Initiatives'],
+    "./1-0-kernel.html": ['Home', 'Kernel'],
+    "./2-0-virtualization.html": ['Home', 'Virtualization'],
+    "./2-1-type1.html": ['Home', 'Virtualization', 'Type 1'],
+    "./2-2-type2.html": ['Home', 'Virtualization', 'Type 2'],
+    "./3-0-containerization.html": ['Home', 'Containerization'],
+    "./3-1-docker.html": ['Home', 'Containerization', 'Docker'],
+    "./3-2-kubernetes.html": ['Home', 'Containerization', 'Kubernetes'],
+    "./3-3-k3s.html": ['Home', 'Containerization', 'K3s'],
 };
 
 const LINK_MAP = {
-    Home: "index.html",
-    Initiatives: "0-0-initiative.html",
-    Kernel: "1-0-kernel.html",
-    Virtualization: "2-0-virtualization.html",
-    "Type 1": "2-1-type1.html",
-    "Type 2": "2-2-type2.html",
-    Containerization: "3-0-containerization.html",
-    Docker: "3-1-docker.html",
-    Kubernetes: "3-2-kubernetes.html",
-    K3s: "3-3-k3s.html",
+    'Home': 'index.html',
+    'Initiatives': '0-0-initiative.html',
+    'Kernel': '1-0-kernel.html',
+    'Virtualization': '2-0-virtualization.html',
+    'Type 1': '2-1-type1.html',
+    'Type 2': '2-2-type2.html',
+    'Containerization': '3-0-containerization.html',
+    'Docker': '3-1-docker.html',
+    'Kubernetes': '3-2-kubernetes.html',
+    'K3s': '3-3-k3s.html',
 };
 
 for (const file of FILES) {
