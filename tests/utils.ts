@@ -14,8 +14,8 @@ let MENU_LINKS: string[];
         const isProduction = __dirname.includes("website");
 
         // Set base paths depending on environment
-        const configPath = isProduction ? path.resolve(__dirname, "../_config.yml") : path.resolve(__dirname, "../../website/_config.yml");
-        const contentDir = isProduction ? path.resolve(__dirname, "../content") : path.resolve(__dirname, "../../content");
+        const configPath = isProduction ? path.resolve(__dirname, "../../_config.yml") : path.resolve(__dirname, "../../website/_config.yml");
+        const contentDir = isProduction ? path.resolve(__dirname, "../../content") : path.resolve(__dirname, "../../content");
 
         // Load the configuration file
         const config = yaml.load(fs.readFileSync(configPath, "utf8")) as { url?: string; root?: string; menu?: Record<string, string> };
