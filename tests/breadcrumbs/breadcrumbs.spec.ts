@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
 const FILES = [
     "./0-0-initiative.html",
@@ -41,36 +41,37 @@ const LINK_MAP = {
 for (const file of FILES) {
     test(`test breadcrumbs ${file}`, async ({ page }) => {
         await page.goto(file);
-        
+
         // Check for the presence of breadcrumbs
-        const breadcrumbs = await page.locator('div.breadcrumbs');
+        const breadcrumbs = await page.locator("div.breadcrumbs");
         await expect(breadcrumbs).toBeVisible();
 
         // Check the text of breadcrumbs
         const expectedBreadcrumbs = BREADCRUMB_MAP[file];
-        const breadcrumbLinks = await breadcrumbs.locator('a'); // Assuming links are <a> elements
+        const breadcrumbLinks = await breadcrumbs.locator("a"); // Assuming links are <a> elements
 
         // Check if the number of breadcrumb links matches
         expect(await breadcrumbLinks.count()).toBe(expectedBreadcrumbs.length - 1); // Last one is strong text
 
         // Validate each breadcrumb link
         for (let i = 0; i < expectedBreadcrumbs.length; i++) {
-            if (i < expectedBreadcrumbs.length - 1) { // Only check links for non-current pages
+            if (i < expectedBreadcrumbs.length - 1) {
+                // Only check links for non-current pages
                 const link = breadcrumbLinks.nth(i);
                 const linkText = await link.textContent();
-                const href = await link.getAttribute('href');
+                const href = await link.getAttribute("href");
 
                 // Check that the link text matches
                 expect(linkText.trim()).toBe(expectedBreadcrumbs[i]);
 
                 // Use the LINK_MAP to check the correct href
                 const expectedHref = LINK_MAP[expectedBreadcrumbs[i]];
-                
+
                 // Check that each breadcrumb links to the correct page
                 expect(href).toBe(expectedHref);
             } else {
                 // Last breadcrumb should be strong text, not a link
-                const currentPageText = await breadcrumbs.locator('strong').textContent();
+                const currentPageText = await breadcrumbs.locator("strong").textContent();
                 expect(currentPageText).toBe(expectedBreadcrumbs[i]);
             }
         }
