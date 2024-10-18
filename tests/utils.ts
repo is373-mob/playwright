@@ -19,7 +19,7 @@ let MENU_LINKS: string[];
 
         // Load the configuration file
         const config = yaml.load(fs.readFileSync(configPath, "utf8")) as { url?: string; root?: string; menu?: Record<string, string> };
-        BASE_URL = `${config.url}` || `http://localhost:4000`;
+        BASE_URL = `${config.url}` || `http://localhost:4000/website/`;
 
         // Add static paths
         NAVIGATION_PATHS = [];
