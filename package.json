@@ -17,6 +17,7 @@
         "@types/node": "^22.7.6"
     },
     "dependencies": {
+        "a11y-contrast-color": "^1.1.0",
         "fs": "^0.0.1-security",
         "js-yaml": "^4.1.0",
         "path": "^0.12.7"
