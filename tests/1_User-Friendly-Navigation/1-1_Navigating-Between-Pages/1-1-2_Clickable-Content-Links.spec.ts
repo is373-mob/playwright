@@ -33,7 +33,7 @@ test.describe("Content Links Tests", () => {
 
     test("should ensure all links are visually distinct", async ({ page }) => {
         // Navigate to the home page
-        await page.goto(`${BASE_URL}`);
+        await page.goto(`/`);
 
         // Verify that links in the content are visually distinct (e.g., different color or underlined)
         const links = await page.locator("main a");
