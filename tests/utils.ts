@@ -49,6 +49,7 @@ let MENU_LINKS: string[];
         console.warn("Could not load base URL, menu links, or content paths from _config.yml, falling back to default values");
         BASE_URL = "http://localhost:4000";
         NAVIGATION_PATHS = ["/"];
+        MENU_LINKS = ["/"];
     }
 })();
 
