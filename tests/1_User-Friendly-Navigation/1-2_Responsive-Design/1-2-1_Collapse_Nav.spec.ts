@@ -21,7 +21,7 @@ test.describe("Responsive Navigation Bar Tests", () => {
         await page.setViewportSize({ width: 375, height: 667 });
 
         // Navigate to the home page
-        await page.goto(`${BASE_URL}`);
+        await page.goto(`/`);
 
         // Click on the menu button to expand the navigation
         const menuButton = await page.locator("#main-nav-toggle"); // Updated selector for Hexo Landscape theme's hamburger menu
@@ -37,7 +37,7 @@ test.describe("Responsive Navigation Bar Tests", () => {
         await page.setViewportSize({ width: 375, height: 667 });
 
         // Navigate to the home page
-        await page.goto(`${BASE_URL}`);
+        await page.goto(`/`);
 
         // Click on the menu button to expand the navigation
         const menuButton = await page.locator("#main-nav-toggle"); // Updated selector for Hexo Landscape theme's hamburger menu
@@ -48,6 +48,6 @@ test.describe("Responsive Navigation Bar Tests", () => {
         await archivesLink.click();
 
         // Verify that the correct page is displayed
-        await expect(page).toHaveURL(`${BASE_URL}archives`);
+        await expect(page).toHaveURL(`./archives`);
     });
 });
