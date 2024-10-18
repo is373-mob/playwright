@@ -1,21 +1,11 @@
-import fs from "fs";
-import * as yaml from "js-yaml";
+const BASE_URL = "http://localhost:4000/website/";
 
-// Load configuration from _config.yml and set environment-like variables once
-let BASE_URL: string;
-let NAVIGATION_PATHS: string[];
+const FILES = ["0-0-initiative.html", "1-0-kernel.html", "2-0-virtualization.html", "2-1-type1.html", "2-2-type2.html", "3-0-containerization.html", "3-1-docker.html", "3-2-kubernetes.html", "3-3-k3s.html"];
 
-(function initializeConfig() {
-    try {
-        const config = yaml.load(fs.readFileSync("../../../website/_config.yml", "utf8")) as { baseUrl?: string };
-        BASE_URL = config.baseUrl || "http://localhost:4000";
-    } catch (e) {
-        console.warn("Could not load base URL from _config.yml, falling back to localhost:4000");
-        BASE_URL = "http://localhost:4000";
-    }
+const MENU_LINKS = [
+    { name: "Home", path: "" },
+    //{ name: "Archives", path: "" },
+    //{ name: "Initiatives", path: "0-0-initiatives.html" },
+];
 
-    // Mapping your Markdown files to paths that should exist in your navigation
-    NAVIGATION_PATHS = ["/", "/1-0-kernel", "/2-0-virtualization", "/2-1-type1", "/2-2-type2", "/3-0-containerization", "/3-1-docker", "/3-2-kubernetes", "/3-3-k3s"];
-})();
-
-export { BASE_URL, NAVIGATION_PATHS };
+export { BASE_URL, FILES, MENU_LINKS };
