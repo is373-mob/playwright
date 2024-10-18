@@ -7,5 +7,3 @@ const MENU_LINKS = [
     //{ name: "Archives", path: "" },
     //{ name: "Initiatives", path: "0-0-initiatives.html" },
 ];
-
-export { BASE_URL, FILES, MENU_LINKS };
