@@ -11,10 +11,10 @@ const FILES = [
     "./3-2-kubernetes.html",
     "./3-3-k3s.html",
 ];
-
+ 
 // Map of expected breadcrumb links for each file
 const BREADCRUMB_MAP = {
-    "./0-0-initiative.html": ['Home', 'Initiative'],
+    "./0-0-initiative.html": ['Home', 'Initiatives'],
     "./1-0-kernel.html": ['Home', 'Kernel'],
     "./2-0-virtualization.html": ['Home', 'Virtualization'],
     "./2-1-type1.html": ['Home', 'Virtualization', 'Type 1'],
@@ -27,7 +27,7 @@ const BREADCRUMB_MAP = {
 
 const LINK_MAP = {
     'Home': 'index.html',
-    'Initiative': '0-0-initiative.html',
+    'Initiatives': '0-0-initiative.html',
     'Kernel': '1-0-kernel.html',
     'Virtualization': '2-0-virtualization.html',
     'Type 1': '2-1-type1.html',
