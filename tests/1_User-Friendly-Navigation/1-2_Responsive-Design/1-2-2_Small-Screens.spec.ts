@@ -45,11 +45,11 @@ test.describe("Responsive Navigation Bar Tests", () => {
         await menuButton.click();
 
         // Click on the "Archives" link in the dropdown menu (assuming it exists)
-        const archivesLink = await page.locator("#mobile-nav .mobile-nav-link >> text=Archives"); // Updated selector for Hexo Landscape theme navigation link
+        const archivesLink = await page.locator("#mobile-nav .mobile-nav-link >> text=Initiatives"); // Updated selector for Hexo Landscape theme navigation link
         await archivesLink.click();
 
         // Verify that the correct page is displayed
-        await expect(page).toHaveURL(`./archives`);
+        await expect(page).toHaveURL(`./0-0-initiative`);
     });
 
     // User Story 1.2.2 Tests
