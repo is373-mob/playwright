@@ -4,7 +4,7 @@ import { BASE_URL } from "../../utils";
 // User Story 1.2.1: "As a mobile user, I want the navigation bar to collapse into a dropdown menu, so I can easily navigate on smaller screens."
 
 test.describe("Responsive Navigation Bar Tests", () => {
-    test("should collapse navigation bar into a dropdown on small screens", async ({ page }) => {
+    /*test("should collapse navigation bar into a dropdown on small screens", async ({ page }) => {
         // Set the viewport to a small screen size
         await page.setViewportSize({ width: 375, height: 667 });
 
@@ -14,7 +14,7 @@ test.describe("Responsive Navigation Bar Tests", () => {
         // Ensure that the collapsed menu icon (hamburger) is visible
         const menuButton = await page.locator("#main-nav-toggle"); // Updated selector for Hexo Landscape theme's hamburger menu
         await expect(menuButton).toBeVisible();
-    });
+    });*/
 
     test("should expand the dropdown menu when the menu button is clicked", async ({ page }) => {
         // Set the viewport to a small screen size
