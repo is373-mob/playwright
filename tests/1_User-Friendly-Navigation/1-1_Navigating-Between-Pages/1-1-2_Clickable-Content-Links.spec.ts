@@ -4,8 +4,8 @@ import { BASE_URL, FILES } from "../../utils";
 // User Story 1.1.2: "As a user, I want links within the content to be clickable, so I can easily navigate to related information."
 
 test.describe("Content Links Tests", () => {
-    for (const file of FILES) {
-        test(`should navigate to the correct page when clicking a link in ${file}`, async ({ page }) => {
+    test(`should navigate to the correct page when clicking a link`, async ({ page }) => {
+        for (const file of FILES) {
             // Navigate to the target HTML file
             await page.goto(`${BASE_URL}${file}`);
 
@@ -27,8 +27,8 @@ test.describe("Content Links Tests", () => {
                     await page.goBack();
                 }
             }
-        });
-    }
+        }
+    });
 
     test("should ensure all links are visually distinct", async ({ page }) => {
         // Navigate to the home page
